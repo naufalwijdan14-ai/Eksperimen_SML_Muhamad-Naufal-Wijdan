@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   preprocess:
@@ -32,6 +32,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add kaggle_preprocessing/titanic_preprocessed.csv
+          
+          # Mengambil file hasil dari folder preprocessing
+          git add preprocessing/titanic_preprocessing.csv
+          
           git commit -m "Update preprocessed data [skip ci]" || echo "No changes to commit"
           git push
