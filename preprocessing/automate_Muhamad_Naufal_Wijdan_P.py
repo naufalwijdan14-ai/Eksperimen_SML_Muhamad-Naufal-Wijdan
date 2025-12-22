@@ -37,7 +37,7 @@ if __name__ == "__main__":
     ROOT_DIR = os.path.dirname(BASE_DIR)
 
     INPUT_PATH = os.path.join(ROOT_DIR, "kaggle_raw", "train.csv")
-    OUTPUT_PATH = os.path.join(ROOT_DIR, "kaggle_preprocessing", "titanic_preprocessed.csv")
+    OUTPUT_PATH = os.path.join(ROOT_DIR, "preprocessing", "titanic_preprocessed.csv")
 
     # Debugging Info (Akan muncul di Log GitHub Actions)
     print(f"DEBUG: Root Directory -> {ROOT_DIR}")
