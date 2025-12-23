@@ -33,8 +33,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Mengambil file hasil dari folder preprocessing
-          git add preprocessing/titanic_preprocessing.csv
+
+          git add -f preprocessing/titanic_preprocessing.csv
           
+          # Commit dan push
           git commit -m "Update preprocessed data [skip ci]" || echo "No changes to commit"
-          git push
+          git push origin main
